@@ -936,3 +936,235 @@ Processing by Devise::RegistrationsController#new as HTML
 Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/?t=1668487824019" for 172.17.0.1 at 2022-11-15 04:50:23 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668487824019"}
+Completed 401 Unauthorized in 19ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2022-11-15 04:50:24 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (20.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 273ms (Views: 253.7ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/user/sign_up" for 172.17.0.1 at 2022-11-15 04:50:27 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/user/sign_up"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.4) lib/rack/proxy.rb:78:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/users/sign_in" for 172.17.0.1 at 2022-11-15 04:50:39 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (92.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 103ms (Views: 101.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/index" for 172.17.0.1 at 2022-11-15 04:50:45 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.4) lib/rack/proxy.rb:78:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for 172.17.0.1 at 2022-11-15 04:50:48 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2022-11-15 04:50:48 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (5.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 172.17.0.1 at 2022-11-15 04:50:52 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.7ms)
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 172.17.0.1 at 2022-11-15 04:51:00 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"UeD9NnZudOZeqvxakH5rmp3S2NFrVRTELnvo6iEs8TZ8JopHcMSXvHabNe32Fvwux1V1hMLcm9PlemRwA2foLA==", "user"=>{"email"=>"user@naver.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Exists (3.6ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "user@naver.com"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mUser Create (3.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "user@naver.com"], ["encrypted_password", "$2a$12$ZvAUmHBbR/mt4Mlk/t0wyeV2B5i4Jx4t1GVsG4YN9Ky8AO.Pi2b4W"], ["created_at", "2022-11-15 04:51:01.734018"], ["updated_at", "2022-11-15 04:51:01.734018"]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://megabox-jrdiv.run.goorm.io/
+Completed 302 Found in 1295ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/" for 172.17.0.1 at 2022-11-15 04:51:02 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+  [1m[36mUser Load (10.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html within layouts/application
+  Rendered megabox/index.html within layouts/application (0.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 7.2ms | ActiveRecord: 10.3ms)
+
+
+Started DELETE "/users/sign_out" for 172.17.0.1 at 2022-11-15 04:51:07 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"xKQpe4a8sz5TZzR/Mf8PmLqAIe59taCaZwLrode/pe0aKCHHVuWvymBdWrau7JvPm/KNLI7miEnEOkXSGDmsFA=="}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://megabox-jrdiv.run.goorm.io/
+Completed 302 Found in 8ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/" for 172.17.0.1 at 2022-11-15 04:51:08 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2022-11-15 04:51:09 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 48ms (Views: 46.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2022-11-15 04:53:24 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (85.5ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (89.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 101ms (Views: 99.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2022-11-15 04:53:33 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.2ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (33.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 45ms (Views: 43.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2022-11-15 04:53:34 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (4.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 172.17.0.1 at 2022-11-15 04:53:37 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::SessionsController#new as HTML
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (0.8ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (3.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_up" for 172.17.0.1 at 2022-11-15 04:53:39 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (0.9ms)
+  Rendered devise/shared/_links.html.erb (2.1ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (7.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
