@@ -2066,3 +2066,269 @@ Processing by MegaboxController#movie as HTML
 Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.3ms)
 
 
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:12:28 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#movie as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/movie.html within layouts/application
+  Rendered megabox/movie.html within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 86ms (Views: 80.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:14:00 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#movie as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/movie.html within layouts/application
+  Rendered megabox/movie.html within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 32ms (Views: 29.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:14:57 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#movie as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/movie.html within layouts/application
+  Rendered megabox/movie.html within layouts/application (0.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 23.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:22:18 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by MegaboxController#movie as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (4.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/movie.html.erb within layouts/application
+  Rendered megabox/movie.html.erb within layouts/application (1.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 113ms (Views: 22.9ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:27:43 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 9.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:31:18 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:32:57 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 49ms (Views: 46.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:33:13 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:36:58 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (64.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 76ms (Views: 73.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:46:27 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 9.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:48:50 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 70ms (Views: 67.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 13:55:42 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 84ms (Views: 79.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 14:06:09 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 14:10:18 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 12ms (Views: 8.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 14:10:19 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 66ms (Views: 63.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 14:10:30 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 9.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 14:12:03 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 57ms (Views: 13.9ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 14:14:05 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (1.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 15.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 14:16:52 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.3ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 14:18:25 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 66.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 14:20:19 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.4ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 81ms (Views: 6.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/?t=1668517137308" for 172.17.0.1 at 2022-11-15 14:20:34 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668517137308"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.3ms)
+
+

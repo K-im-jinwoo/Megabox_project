@@ -4,4 +4,7 @@ class MegaboxController < ApplicationController
 	
 	def movie
 	end
+	
+	def ticket
+	end
 end
