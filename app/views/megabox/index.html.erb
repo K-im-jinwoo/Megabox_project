@@ -1,0 +1,32 @@
+<div>
+	<h1>
+		박스오피스
+	</h1>
+	<ul>
+		<% @movies.each do |movie| %>
+			<li>
+				<a href="#">
+					영화상세정보로 이동
+					<% if movie.movie_img.attached? %>
+						<img src="<%= url_for(movie.movie_img) %>" alt="영화 포스터">
+					<% end %>
+					<h1>
+						<%= movie.movie_title %>
+					</h1>
+					<p>
+						<%= movie.movie_desc %>
+					</p>
+					<button>
+						<a href="#">예매</a>
+					</button>
+				</a>
+			</li>
+		<% end %>	
+	</ul>
+	
+	<p>
+		영화설명
+	</p>
+	
+	
+</div>
