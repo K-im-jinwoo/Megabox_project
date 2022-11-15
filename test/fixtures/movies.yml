@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  movie_img: MyString
+  movie_title: MyText
+  movie_ge: MyText
+  movie_time: 
+  movie_desc: MyText
+  movie_age: 
+
+two:
+  movie_img: MyString
+  movie_title: MyText
+  movie_ge: MyText
+  movie_time: 
+  movie_desc: MyText
+  movie_age: 
