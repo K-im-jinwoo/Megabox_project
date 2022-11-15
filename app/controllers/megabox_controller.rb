@@ -7,7 +7,12 @@ class MegaboxController < ApplicationController
 		@movies = Movie.all
 	end
 	
+
   def show
 	  @movie = Movie.find(params[:id])
   end
+
+	def ticket
+	end
+
 end
