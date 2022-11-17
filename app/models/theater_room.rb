@@ -1,0 +1,2 @@
+class TheaterRoom < ApplicationRecord
+end
