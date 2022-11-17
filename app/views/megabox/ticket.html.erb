@@ -27,7 +27,7 @@
 	<button>영화</button>
 	<ul>
 		<% @movies.each do |movie| %>
-			<li><%= movie.movie_title %></li>
+			<li><a href="/megabox/ticket_show/<%= movie.id %>"><%= movie.movie_title %></a></li>
 		<% end %>
 	</ul>
 	<button>큐레이션</button>
