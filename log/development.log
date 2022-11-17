@@ -4060,3 +4060,994 @@ Completed 200 OK in 46ms (Views: 43.3ms | ActiveRecord: 0.3ms)
 >>>>>>> fbe7e9ac68907899155dc260fe227ae13df06659
 
 
+Started GET "/?t=1668524182049" for 172.17.0.1 at 2022-11-15 14:56:22 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.8.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.8.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.4) lib/rack/proxy.rb:78:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8575728061014197160)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateMovies (20221115124348)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (61.4ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "movie_img" character varying, "movie_title" text, "movie_ge" text, "movie_time" integer, "movie_desc" text, "movie_age" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20221115124348_create_movies.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221115124348"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to DeviseCreateAdminUsers (20221115132511)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (21.4ms)[0m  [1m[35mCREATE TABLE "admin_users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp, "remember_created_at" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20221115132511_devise_create_admin_users.rb:5
+  [1m[35m (7.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admin_users_on_email" ON "admin_users"  ("email")[0m
+  ↳ db/migrate/20221115132511_devise_create_admin_users.rb:39
+  [1m[35m (6.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_admin_users_on_reset_password_token" ON "admin_users"  ("reset_password_token")[0m
+  ↳ db/migrate/20221115132511_devise_create_admin_users.rb:40
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221115132511"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateActiveAdminComments (20221115132549)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (18.5ms)[0m  [1m[35mCREATE TABLE "active_admin_comments" ("id" bigserial primary key, "namespace" character varying, "body" text, "resource_type" character varying, "resource_id" bigint, "author_type" character varying, "author_id" bigint, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20221115132549_create_active_admin_comments.rb:3
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_resource_type_and_resource_id" ON "active_admin_comments"  ("resource_type", "resource_id")[0m
+  ↳ db/migrate/20221115132549_create_active_admin_comments.rb:3
+  [1m[35m (7.7ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_author_type_and_author_id" ON "active_admin_comments"  ("author_type", "author_id")[0m
+  ↳ db/migrate/20221115132549_create_active_admin_comments.rb:3
+  [1m[35m (8.3ms)[0m  [1m[35mCREATE  INDEX  "index_active_admin_comments_on_namespace" ON "active_admin_comments"  ("namespace")[0m
+  ↳ db/migrate/20221115132549_create_active_admin_comments.rb:10
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221115132549"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (2.7ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateActiveStorageTables (20221115133738)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (17.8ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" bigserial primary key, "key" character varying NOT NULL, "filename" character varying NOT NULL, "content_type" character varying, "metadata" text, "byte_size" bigint NOT NULL, "checksum" character varying NOT NULL, "created_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20221115133738_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (7.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_blobs_on_key" ON "active_storage_blobs"  ("key")[0m
+  ↳ db/migrate/20221115133738_create_active_storage_tables.active_storage.rb:4
+  [1m[35m (22.8ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" bigserial primary key, "name" character varying NOT NULL, "record_type" character varying NOT NULL, "record_id" bigint NOT NULL, "blob_id" bigint NOT NULL, "created_at" timestamp NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  ↳ db/migrate/20221115133738_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE  INDEX  "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments"  ("blob_id")[0m
+  ↳ db/migrate/20221115133738_create_active_storage_tables.active_storage.rb:16
+  [1m[35m (7.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_active_storage_attachments_uniqueness" ON "active_storage_attachments"  ("record_type", "record_id", "name", "blob_id")[0m
+  ↳ db/migrate/20221115133738_create_active_storage_tables.active_storage.rb:16
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221115133738"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (3.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8575728061014197160)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Started GET "/?t=1668524182049" for 172.17.0.1 at 2022-11-15 14:57:10 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668524182049"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.0ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  Rendered megabox/index.html.erb within layouts/application (7.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 798ms (Views: 593.3ms | ActiveRecord: 9.7ms)
+
+
+Started GET "/admin" for 172.17.0.1 at 2022-11-15 14:57:40 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/login" for 172.17.0.1 at 2022-11-15 14:57:40 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.8ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (140.6ms)
+Completed 200 OK in 262ms (Views: 247.2ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/admin/login" for 172.17.0.1 at 2022-11-15 14:58:15 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MndJlPto1isHRmMyvK9QSQT1R1QXSq9nOCa0TurfT6gzetOHV1AdSBJE4eq5kKUm5brZT9A7dW9WB2w76d9uTw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"로그인"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (1.0ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 69ms (ActiveRecord: 1.4ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"MndJlPto1isHRmMyvK9QSQT1R1QXSq9nOCa0TurfT6gzetOHV1AdSBJE4eq5kKUm5brZT9A7dW9WB2w76d9uTw==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"로그인"}
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.0ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (109.3ms)
+Completed 200 OK in 1305ms (Views: 283.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 172.17.0.1 at 2022-11-15 14:58:32 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xtk4aVXvyFJirDCwnMiZmIe7JJ9TcTp5svzoO4ygK3LH1KJ6+dcDMXeusmiZ92z3ZvS6hJQA4HHc3TBOj6AKlQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"로그인"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 5ms (ActiveRecord: 0.9ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xtk4aVXvyFJirDCwnMiZmIe7JJ9TcTp5svzoO4ygK3LH1KJ6+dcDMXeusmiZ92z3ZvS6hJQA4HHc3TBOj6AKlQ==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"로그인"}
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.5ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (95.4ms)
+Completed 200 OK in 1202ms (Views: 197.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 172.17.0.1 at 2022-11-15 14:59:14 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"meVRmvBnI0/uDfNX/OLPhfX5tnG9XizxIMhkle46n/GY6MuJXF/oLPsPcY/53TrqFLYoanov9vlO6bzg7Tq+Fg==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"로그인"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.7ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"meVRmvBnI0/uDfNX/OLPhfX5tnG9XizxIMhkle46n/GY6MuJXF/oLPsPcY/53TrqFLYoanov9vlO6bzg7Tq+Fg==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"로그인"}
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (98.0ms)
+Completed 200 OK in 1129ms (Views: 199.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin/login" for 172.17.0.1 at 2022-11-15 15:00:30 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RdW4PwfLJQelkhW4ZwTGuc/DtQJHKPuzrhE2IX+1LAZE2CIsq/PuZLCQl2BiOzPWLowrGYBZIbvAMO5UfLUN4Q==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"로그인"}
+  [1m[36mUser Load (50.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Completed 401 Unauthorized in 54ms (ActiveRecord: 50.9ms)
+
+
+Processing by ActiveAdmin::Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RdW4PwfLJQelkhW4ZwTGuc/DtQJHKPuzrhE2IX+1LAZE2CIsq/PuZLCQl2BiOzPWLowrGYBZIbvAMO5UfLUN4Q==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"로그인"}
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/shared/_links.erb (1.1ms)
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/devise/sessions/new.html.erb within layouts/active_admin_logged_out (104.0ms)
+Completed 200 OK in 1213ms (Views: 200.6ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ db/seeds.rb:8
+  [1m[36mAdminUser Exists (0.9ms)[0m  [1m[34mSELECT  1 AS one FROM "admin_users" WHERE "admin_users"."email" = $1 LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:8
+  [1m[36mAdminUser Create (0.9ms)[0m  [1m[32mINSERT INTO "admin_users" ("email", "encrypted_password", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["email", "admin@example.com"], ["encrypted_password", "$2a$12$YLRpbIP5f4fsM2zKqRr66eHj25BqAOHjbJYnm75EARrem8Fvm/nF6"], ["created_at", "2022-11-15 15:01:20.731680"], ["updated_at", "2022-11-15 15:01:20.731680"]]
+  ↳ db/seeds.rb:8
+  [1m[35m (4.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ db/seeds.rb:8
+Started POST "/admin/login" for 172.17.0.1 at 2022-11-15 15:01:35 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveAdmin::Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A/R1r5uJH9GIQ+DUfh2vYUXFO/3DCHtLLJhutS7stnEC+e+8N7HUsp1BYgx7IloOpIql5gR5oUNCubbALeyXlg==", "admin_user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"로그인"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."email" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Redirected to http://megabox-project-zbwqh.run.goorm.io/admin
+Completed 302 Found in 1148ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/admin" for 172.17.0.1 at 2022-11-15 15:01:36 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::DashboardController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/page/index.html.arb (94.5ms)
+Completed 200 OK in 127ms (Views: 97.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/movies" for 172.17.0.1 at 2022-11-15 15:01:46 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MoviesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "movies" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Load (0.9ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Load (0.6ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (490.4ms)
+Completed 200 OK in 585ms (Views: 430.1ms | ActiveRecord: 146.2ms)
+
+
+Started GET "/admin/movies/new" for 172.17.0.1 at 2022-11-15 15:02:02 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MoviesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (51.5ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/new.html.arb (212.8ms)
+Completed 200 OK in 281ms (Views: 218.7ms | ActiveRecord: 51.9ms)
+
+
+Started GET "/admin/admin_users" for 172.17.0.1 at 2022-11-15 15:02:09 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AdminUsersController#index as HTML
+  [1m[36mUser Load (65.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "admin_users"[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35mCACHE  (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM (SELECT  1 AS one FROM "admin_users" LIMIT $1 OFFSET $2) subquery_for_count[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.6ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" ORDER BY "admin_users"."id" desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/index.html.arb (309.1ms)
+Completed 200 OK in 384ms (Views: 312.3ms | ActiveRecord: 67.9ms)
+
+
+Started GET "/admin/admin_users/1" for 172.17.0.1 at 2022-11-15 15:02:14 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::AdminUsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.3ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/show.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/show.html.arb (99.1ms)
+Completed 200 OK in 124ms (Views: 103.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/admin/movies/new" for 172.17.0.1 at 2022-11-15 15:02:45 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MoviesController#new as HTML
+  [1m[36mUser Load (33.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.4ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/new.html.arb
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/new.html.arb (216.6ms)
+Completed 200 OK in 260ms (Views: 222.9ms | ActiveRecord: 33.9ms)
+
+
+Started POST "/admin/movies" for 172.17.0.1 at 2022-11-15 15:03:23 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by Admin::MoviesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gKJ+4nv1i4Lvsr0n4Abe+WwVn0ShfgnRRqjTwfjCWr+4OjAkWgG0+0MvAi6i1DAYOlMCrcbSa3P/6mz7ztzDVw==", "movie"=>{"movie_img"=>#<ActionDispatch::Http::UploadedFile:0x0000561eb56d00e0 @tempfile=#<Tempfile:/tmp/RackMultipart20221115-3757-asseuy.png>, @original_filename="펭수.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"movie[movie_img]\"; filename=\"\xE1\x84\x91\xE1\x85\xA6\xE1\x86\xBC\xE1\x84\x89\xE1\x85\xAE.png\"\r\nContent-Type: image/png\r\n">, "movie_title"=>"펭수", "movie_ge"=>"호러", "movie_time"=>"1500", "movie_desc"=>"ㅁㄴㅇ", "movie_age"=>"19"}, "commit"=>"Create Movie"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.2ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[32mUploaded file to key: i1ZkWZiWdd7pqUuqCRyoLLKR (checksum: iwSw/VWsu3ompq+MzikcwA==)[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Blob Create (0.8ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["key", "i1ZkWZiWdd7pqUuqCRyoLLKR"], ["filename", "펭수.png"], ["content_type", "image/png"], ["metadata", "{\"identified\":true}"], ["byte_size", 111272], ["checksum", "iwSw/VWsu3ompq+MzikcwA=="], ["created_at", "2022-11-15 15:03:23.626715"]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (3.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mMovie Create (0.6ms)[0m  [1m[32mINSERT INTO "movies" ("movie_title", "movie_ge", "movie_time", "movie_desc", "movie_age", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["movie_title", "펭수"], ["movie_ge", "호러"], ["movie_time", 1500], ["movie_desc", "ㅁㄴㅇ"], ["movie_age", 19], ["created_at", "2022-11-15 15:03:23.646579"], ["updated_at", "2022-11-15 15:03:23.646579"]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mActiveStorage::Attachment Create (0.9ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "movie_img"], ["record_type", "Movie"], ["record_id", 1], ["blob_id", 1], ["created_at", "2022-11-15 15:03:23.648650"]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mMovie Update (0.4ms)[0m  [1m[33mUPDATE "movies" SET "updated_at" = $1 WHERE "movies"."id" = $2[0m  [["updated_at", "2022-11-15 15:03:23.650532"], ["id", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 1f7e36be-49b8-4235-bfcb-03b7a06f7190) to Async(default) with arguments: #<GlobalID:0x0000561eb71776f0 @uri=#<URI::GID gid://goorm-rails-app/ActiveStorage::Blob/1>>
+Redirected to http://megabox-project-zbwqh.run.goorm.io/admin/movies/1
+Completed 302 Found in 291ms (ActiveRecord: 12.6ms)
+
+
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1f7e36be-49b8-4235-bfcb-03b7a06f7190] Performing ActiveStorage::AnalyzeJob (Job ID: 1f7e36be-49b8-4235-bfcb-03b7a06f7190) from Async(default) with arguments: #<GlobalID:0x0000561eb71f5f00 @uri=#<URI::GID gid://goorm-rails-app/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1f7e36be-49b8-4235-bfcb-03b7a06f7190] [36m  Disk Storage (0.2ms) [0m[34mDownloaded file from key: i1ZkWZiWdd7pqUuqCRyoLLKR[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1f7e36be-49b8-4235-bfcb-03b7a06f7190] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1f7e36be-49b8-4235-bfcb-03b7a06f7190]   [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1f7e36be-49b8-4235-bfcb-03b7a06f7190]   ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Started GET "/admin/movies/1" for 172.17.0.1 at 2022-11-15 15:03:23 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1f7e36be-49b8-4235-bfcb-03b7a06f7190]   [1m[36mActiveStorage::Blob Update (75.0ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = $1 WHERE "active_storage_blobs"."id" = $2[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1f7e36be-49b8-4235-bfcb-03b7a06f7190]   ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1f7e36be-49b8-4235-bfcb-03b7a06f7190]   [1m[35m (3.8ms)[0m  [1m[35mCOMMIT[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1f7e36be-49b8-4235-bfcb-03b7a06f7190]   ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[ActiveJob] [ActiveStorage::AnalyzeJob] [1f7e36be-49b8-4235-bfcb-03b7a06f7190] Performed ActiveStorage::AnalyzeJob (Job ID: 1f7e36be-49b8-4235-bfcb-03b7a06f7190) from Async(default) in 90.37ms
+Processing by Admin::MoviesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mAdminUser Load (0.7ms)[0m  [1m[34mSELECT  "admin_users".* FROM "admin_users" WHERE "admin_users"."id" = $1 ORDER BY "admin_users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/show.html.arb
+  [1m[36mActiveStorage::Attachment Load (0.6ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/admin/movies.rb:38
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/admin/movies.rb:38
+  Rendered /usr/local/lib/ruby/gems/2.6.0/gems/activeadmin-2.9.0/app/views/active_admin/resource/show.html.arb (110.9ms)
+Completed 200 OK in 199ms (Views: 190.5ms | ActiveRecord: 3.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png" for 172.17.0.1 at 2022-11-15 15:03:24 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e", "filename"=>"펭수"}
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.8ms) [0m[34mGenerated URL for file at key: i1ZkWZiWdd7pqUuqCRyoLLKR (http://megabox-project-zbwqh.run.goorm.io/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTVUMTU6MDg6MjQuMjQyWiIsInB1ciI6ImJsb2Jfa2V5In19--349a065d077675cea74d555123304ccbcd72f8d8/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png)[0m
+Redirected to http://megabox-project-zbwqh.run.goorm.io/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTVUMTU6MDg6MjQuMjQyWiIsInB1ciI6ImJsb2Jfa2V5In19--349a065d077675cea74d555123304ccbcd72f8d8/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png
+Completed 302 Found in 19ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTVUMTU6MDg6MjQuMjQyWiIsInB1ciI6ImJsb2Jfa2V5In19--349a065d077675cea74d555123304ccbcd72f8d8/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png" for 172.17.0.1 at 2022-11-15 15:03:24 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F.png\"; filename*=UTF-8''%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTVUMTU6MDg6MjQuMjQyWiIsInB1ciI6ImJsb2Jfa2V5In19--349a065d077675cea74d555123304ccbcd72f8d8", "filename"=>"펭수"}
+Completed 200 OK in 8ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2022-11-15 15:03:33 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  Rendered megabox/index.html.erb within layouts/application (4.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 18.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTVUMTU6MDg6MjQuMjQyWiIsInB1ciI6ImJsb2Jfa2V5In19--349a065d077675cea74d555123304ccbcd72f8d8/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png" for 172.17.0.1 at 2022-11-15 15:03:33 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F.png\"; filename*=UTF-8''%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTVUMTU6MDg6MjQuMjQyWiIsInB1ciI6ImJsb2Jfa2V5In19--349a065d077675cea74d555123304ccbcd72f8d8", "filename"=>"펭수"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 172.17.0.1 at 2022-11-15 15:03:37 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  Rendered megabox/index.html.erb within layouts/application (4.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 105.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 172.17.0.1 at 2022-11-15 15:03:42 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+  [1m[36mUser Load (33.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  Rendered megabox/index.html.erb within layouts/application (6.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 62ms (Views: 23.3ms | ActiveRecord: 35.0ms)
+
+
+Started GET "/megabox/movie" for 172.17.0.1 at 2022-11-15 15:04:13 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#movie as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/movie.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/movie.html.erb:7
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/movie.html.erb:11
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/movie.html.erb:11
+  Rendered megabox/movie.html.erb within layouts/application (5.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 109ms (Views: 104.7ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png" for 172.17.0.1 at 2022-11-15 15:04:13 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e", "filename"=>"펭수"}
+  [1m[36mActiveStorage::Blob Load (11.7ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: i1ZkWZiWdd7pqUuqCRyoLLKR (http://megabox-project-zbwqh.run.goorm.io/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTVUMTU6MDk6MTMuODM4WiIsInB1ciI6ImJsb2Jfa2V5In19--75d4cec0af1131b77e5abce9b14fb6cbae63beff/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png)[0m
+Redirected to http://megabox-project-zbwqh.run.goorm.io/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTVUMTU6MDk6MTMuODM4WiIsInB1ciI6ImJsb2Jfa2V5In19--75d4cec0af1131b77e5abce9b14fb6cbae63beff/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png
+Completed 302 Found in 15ms (ActiveRecord: 11.7ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTVUMTU6MDk6MTMuODM4WiIsInB1ciI6ImJsb2Jfa2V5In19--75d4cec0af1131b77e5abce9b14fb6cbae63beff/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png" for 172.17.0.1 at 2022-11-15 15:04:14 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F.png\"; filename*=UTF-8''%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTVUMTU6MDk6MTMuODM4WiIsInB1ciI6ImJsb2Jfa2V5In19--75d4cec0af1131b77e5abce9b14fb6cbae63beff", "filename"=>"펭수"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/megabox/show/1" for 172.17.0.1 at 2022-11-15 15:04:24 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[36mMovie Load (33.7ms)[0m  [1m[34mSELECT  "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/megabox_controller.rb:12
+  Rendering megabox/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/show.html.erb:5
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/show.html.erb:5
+  Rendered megabox/show.html.erb within layouts/application (3.8ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 55ms (Views: 17.2ms | ActiveRecord: 35.0ms)
+
+
+Started GET "/?t=1668576834795" for 172.17.0.1 at 2022-11-16 05:33:55 +0000
+Cannot render console from 10.1.20.90! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668576834795"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (3.0ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (1.6ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  Rendered megabox/index.html.erb within layouts/application (385.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 899ms (Views: 699.2ms | ActiveRecord: 163.9ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png" for 172.17.0.1 at 2022-11-16 05:33:56 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e", "filename"=>"펭수"}
+  [1m[36mActiveStorage::Blob Load (0.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: i1ZkWZiWdd7pqUuqCRyoLLKR (http://megabox-project-zbwqh.run.goorm.io/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTZUMDU6Mzg6NTYuMjIzWiIsInB1ciI6ImJsb2Jfa2V5In19--6abfe110067e2b6d870550af5206dff36e46934f/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png)[0m
+Redirected to http://megabox-project-zbwqh.run.goorm.io/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTZUMDU6Mzg6NTYuMjIzWiIsInB1ciI6ImJsb2Jfa2V5In19--6abfe110067e2b6d870550af5206dff36e46934f/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTZUMDU6Mzg6NTYuMjIzWiIsInB1ciI6ImJsb2Jfa2V5In19--6abfe110067e2b6d870550af5206dff36e46934f/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png" for 172.17.0.1 at 2022-11-16 05:33:56 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F.png\"; filename*=UTF-8''%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTZUMDU6Mzg6NTYuMjIzWiIsInB1ciI6ImJsb2Jfa2V5In19--6abfe110067e2b6d870550af5206dff36e46934f", "filename"=>"펭수"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?t=1668576834795" for 172.17.0.1 at 2022-11-16 05:33:58 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668576834795"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  Rendered megabox/index.html.erb within layouts/application (10.1ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 123ms (Views: 113.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/?t=1668576834795" for 172.17.0.1 at 2022-11-16 05:33:59 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668576834795"}
+  [1m[36mUser Load (30.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  Rendered megabox/index.html.erb within layouts/application (7.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 141ms (Views: 103.2ms | ActiveRecord: 32.1ms)
+
+
+Started GET "/?t=1668576834795" for 172.17.0.1 at 2022-11-16 05:34:12 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668576834795"}
+  [1m[36mUser Load (65.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  Rendered megabox/index.html.erb within layouts/application (5.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 94ms (Views: 24.2ms | ActiveRecord: 66.9ms)
+
+
+Started GET "/megabox/ticket" for 172.17.0.1 at 2022-11-16 05:42:00 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  
+ActionController::RoutingError (No route matches [GET] "/megabox/ticket"):
+  
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.4) lib/rack/proxy.rb:78:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/?t=1668577380416" for 172.17.0.1 at 2022-11-16 05:43:00 +0000
+Cannot render console from 10.1.21.16! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668577380416"}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 185ms (Views: 90.4ms | ActiveRecord: 79.7ms)
+
+
+Started GET "/?t=1668667827350" for 172.17.0.1 at 2022-11-17 06:50:27 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by MegaboxController#ticket as HTML
+  Parameters: {"t"=>"1668667827350"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/ticket.html.erb within layouts/application
+  Rendered megabox/ticket.html.erb within layouts/application (0.9ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 501ms (Views: 395.9ms | ActiveRecord: 79.9ms)
+
+
+Started GET "/?t=1668667847639" for 172.17.0.1 at 2022-11-17 06:50:47 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668667847639"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (2.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (3.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (1.9ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  Rendered megabox/index.html.erb within layouts/application (211.2ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 399ms (Views: 362.5ms | ActiveRecord: 23.2ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png" for 172.17.0.1 at 2022-11-17 06:50:48 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e", "filename"=>"펭수"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (0.7ms) [0m[34mGenerated URL for file at key: i1ZkWZiWdd7pqUuqCRyoLLKR (http://megabox-project-zbwqh.run.goorm.io/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDY6NTU6NDguNjMyWiIsInB1ciI6ImJsb2Jfa2V5In19--cdecc80a759d17007cb32c36ff1b9c5be56116f0/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png)[0m
+Redirected to http://megabox-project-zbwqh.run.goorm.io/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDY6NTU6NDguNjMyWiIsInB1ciI6ImJsb2Jfa2V5In19--cdecc80a759d17007cb32c36ff1b9c5be56116f0/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png
+Completed 302 Found in 5ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDY6NTU6NDguNjMyWiIsInB1ciI6ImJsb2Jfa2V5In19--cdecc80a759d17007cb32c36ff1b9c5be56116f0/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png" for 172.17.0.1 at 2022-11-17 06:50:48 +0000
+Cannot render console from 10.1.20.239! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F.png\"; filename*=UTF-8''%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDY6NTU6NDguNjMyWiIsInB1ciI6ImJsb2Jfa2V5In19--cdecc80a759d17007cb32c36ff1b9c5be56116f0", "filename"=>"펭수"}
+Completed 200 OK in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png" for 172.17.0.1 at 2022-11-17 07:05:59 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.8.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.8.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.4) lib/rack/proxy.rb:78:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png" for 172.17.0.1 at 2022-11-17 07:06:05 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (67.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.8.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.8.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.4) lib/rack/proxy.rb:78:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png" for 172.17.0.1 at 2022-11-17 07:06:22 +0000
+Cannot render console from 10.1.20.142! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.8.1) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.8.1) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.8.1) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:22:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.8.1) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.8.1) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.8.1) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.4) lib/rack/method_override.rb:24:in `call'
+rack (2.2.4) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.8.1) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.4) lib/rack/sendfile.rb:110:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.7.4) lib/rack/proxy.rb:78:in `call'
+railties (5.2.8.1) lib/rails/engine.rb:524:in `call'
+puma (4.3.12) lib/puma/configuration.rb:228:in `call'
+puma (4.3.12) lib/puma/server.rb:727:in `handle_request'
+puma (4.3.12) lib/puma/server.rb:476:in `process_client'
+puma (4.3.12) lib/puma/server.rb:332:in `block in run'
+puma (4.3.12) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8575728061014197160)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateSeats (20221117070532)
+  [1m[35m (2.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (69.9ms)[0m  [1m[34mSELECT pg_advisory_unlock(8575728061014197160)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8575728061014197160)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateSeats (20221117070532)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (1326.0ms)[0m  [1m[35mCREATE TABLE "seats" ("id" bigserial primary key, "seat_name" character varying, "seat_use" boolean, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20221117070532_create_seats.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221117070532"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (138.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (5.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(8575728061014197160)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Started GET "/?t=1668669606796" for 172.17.0.1 at 2022-11-17 07:20:08 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668669606796"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (73.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  Rendered megabox/index.html.erb within layouts/application (285.0ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 673ms (Views: 497.9ms | ActiveRecord: 89.7ms)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png" for 172.17.0.1 at 2022-11-17 07:20:11 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::BlobsController#show as PNG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d08e72e694fa13ea4407a080336ced20fc3a000e", "filename"=>"펭수"}
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+[36m  Disk Storage (1.8ms) [0m[34mGenerated URL for file at key: i1ZkWZiWdd7pqUuqCRyoLLKR (http://megabox-project-zbwqh.run.goorm.io/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDc6MjU6MTEuMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--009c61e8b41001793778e7fda7d57f23b893adf2/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png)[0m
+Redirected to http://megabox-project-zbwqh.run.goorm.io/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDc6MjU6MTEuMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--009c61e8b41001793778e7fda7d57f23b893adf2/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png
+Completed 302 Found in 9ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDc6MjU6MTEuMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--009c61e8b41001793778e7fda7d57f23b893adf2/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png" for 172.17.0.1 at 2022-11-17 07:20:11 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F.png\"; filename*=UTF-8''%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDc6MjU6MTEuMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--009c61e8b41001793778e7fda7d57f23b893adf2", "filename"=>"펭수"}
+Completed 200 OK in 27ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?t=1668669646028" for 172.17.0.1 at 2022-11-17 07:20:46 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668669646028"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:22
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:22
+  Rendered megabox/index.html.erb within layouts/application (7.7ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 139ms (Views: 97.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDc6MjU6MTEuMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--009c61e8b41001793778e7fda7d57f23b893adf2/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png" for 172.17.0.1 at 2022-11-17 07:20:46 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F.png\"; filename*=UTF-8''%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDc6MjU6MTEuMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--009c61e8b41001793778e7fda7d57f23b893adf2", "filename"=>"펭수"}
+Completed 304 Not Modified in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/?t=1668669705583" for 172.17.0.1 at 2022-11-17 07:21:45 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668669705583"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (1.5ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:18
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:22
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:22
+  Rendered megabox/index.html.erb within layouts/application (8.6ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 89ms (Views: 27.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDc6MjU6MTEuMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--009c61e8b41001793778e7fda7d57f23b893adf2/%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png?content_type=image%2Fpng&disposition=inline%3B+filename%3D%22%253F%253F%253F%253F%253F.png%22%3B+filename%2A%3DUTF-8%27%27%25E1%2584%2591%25E1%2585%25A6%25E1%2586%25BC%25E1%2584%2589%25E1%2585%25AE.png" for 172.17.0.1 at 2022-11-17 07:21:45 +0000
+Cannot render console from 10.1.21.240! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by ActiveStorage::DiskController#show as PNG
+  Parameters: {"content_type"=>"image/png", "disposition"=>"inline; filename=\"%3F%3F%3F%3F%3F.png\"; filename*=UTF-8''%E1%84%91%E1%85%A6%E1%86%BC%E1%84%89%E1%85%AE.png", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWRhVEZhYTFkYWFWZGtaRGR3Y1ZWMWNVTlNlVzlNVEV0U0Jqb0dSVlE2RUdScGMzQnZjMmwwYVc5dVNTSnZhVzVzYVc1bE95Qm1hV3hsYm1GdFpUMGlKVE5HSlROR0pUTkdKVE5HSlROR0xuQnVaeUk3SUdacGJHVnVZVzFsS2oxVlZFWXRPQ2NuSlVVeEpUZzBKVGt4SlVVeEpUZzFKVUUySlVVeEpUZzJKVUpESlVVeEpUZzBKVGc1SlVVeEpUZzFKVUZGTG5CdVp3WTdCbFE2RVdOdmJuUmxiblJmZEhsd1pVa2lEbWx0WVdkbEwzQnVad1k3QmxRPSIsImV4cCI6IjIwMjItMTEtMTdUMDc6MjU6MTEuMDUyWiIsInB1ciI6ImJsb2Jfa2V5In19--009c61e8b41001793778e7fda7d57f23b893adf2", "filename"=>"펭수"}
+Completed 304 Not Modified in 2ms (ActiveRecord: 0.0ms)
+
+
