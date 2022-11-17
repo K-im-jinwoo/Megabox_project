@@ -12,22 +12,22 @@
   <body>
 	  <div>
 		  <nav>
-			<h1><%= link_to "메가박스" %></h1>
+			<h1><%= link_to "메가박스" %><img src="<%= asset_path("megabox_logo.jpg") %>" alt="logo" style="width:300px;"></h1>
 			<ul>
 		  <% if user_signed_in? %>
-		  	<li><%= link_to "회원정보", edit_user_registration_path %> |</li>
-		  	<li><%= link_to "로그아웃", destroy_user_session_path, method: :delete %> |</li>
+		  	<li><%= link_to "회원정보", edit_user_registration_path %> </li>
+		  	<li><%= link_to "로그아웃", destroy_user_session_path, method: :delete %> </li>
 		  	<li><%= link_to "빠른예매", edit_user_registration_path %></li> 
 		  <% else %>
-			  <li><%= link_to "로그인", user_session_path %> |</li>
+			  <li><%= link_to "로그인", user_session_path %> </li>
 			  <li><%= link_to "회원가입" %></li>
 		  <%end%>
 			</ul>
 			<ul>
-				<li><%= link_to "영화" %></li>
-				<li><%= link_to "예매" %></li>
+				<li><a href="/megabox/movie">영화</a></li>
+				<li><a href="/megabox/ticket">예매</a></li>
 				<li><%= link_to "극장" %></li>
-			  </ul>
+			</ul>
 		  </nav>
 		  
 	  </div>

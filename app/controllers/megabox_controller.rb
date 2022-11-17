@@ -13,6 +13,7 @@ class MegaboxController < ApplicationController
   end
 
 	def ticket
+		@movies = Movie.all
 	end
 
 end
