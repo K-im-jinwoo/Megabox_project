@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_11_17_094756) do
+ActiveRecord::Schema.define(version: 2022_11_18_010121) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -78,6 +78,10 @@ ActiveRecord::Schema.define(version: 2022_11_17_094756) do
     t.integer "sc_end"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "movie_id"
+    t.bigint "theater_room_id"
+    t.index ["movie_id"], name: "index_screens_on_movie_id"
+    t.index ["theater_room_id"], name: "index_screens_on_theater_room_id"
   end
 
   create_table "seats", force: :cascade do |t|
@@ -85,6 +89,8 @@ ActiveRecord::Schema.define(version: 2022_11_17_094756) do
     t.boolean "seat_use"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "theater_room_id"
+    t.index ["theater_room_id"], name: "index_seats_on_theater_room_id"
   end
 
   create_table "theater_rooms", force: :cascade do |t|
@@ -92,6 +98,8 @@ ActiveRecord::Schema.define(version: 2022_11_17_094756) do
     t.integer "tr_seat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "theater_id"
+    t.index ["theater_id"], name: "index_theater_rooms_on_theater_id"
   end
 
   create_table "theaters", force: :cascade do |t|
@@ -107,6 +115,10 @@ ActiveRecord::Schema.define(version: 2022_11_17_094756) do
     t.string "tk_seat"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id"
+    t.bigint "screen_id"
+    t.index ["screen_id"], name: "index_ticketings_on_screen_id"
+    t.index ["user_id"], name: "index_ticketings_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -122,4 +134,10 @@ ActiveRecord::Schema.define(version: 2022_11_17_094756) do
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "screens", "movies"
+  add_foreign_key "screens", "theater_rooms"
+  add_foreign_key "seats", "theater_rooms"
+  add_foreign_key "theater_rooms", "theaters"
+  add_foreign_key "ticketings", "screens"
+  add_foreign_key "ticketings", "users"
 end

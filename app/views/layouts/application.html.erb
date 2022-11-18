@@ -7,10 +7,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
   </head>
 
   <body>
 	  <div>
+		  <%= icon('fas', 'flag') %>
 		  <nav>
 			<h1><%= link_to "메가박스" %><img src="<%= asset_path("megabox_logo.jpg") %>" alt="logo" style="width:300px;"></h1>
 			<ul>
@@ -33,5 +35,7 @@
 	  </div>
 	  
     <%= yield %>
+  <!-- iamport.payment.js -->
+  <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
   </body>
 </html>

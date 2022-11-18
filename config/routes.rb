@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
+  get 'megabox/ticket_order'
   get 'megabox/ticket_show/:id' => "megabox#ticket_show"
   get 'megabox/ticket'
   get 'megabox/show/:id' => "megabox#show"
