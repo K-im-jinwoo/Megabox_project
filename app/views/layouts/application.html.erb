@@ -11,25 +11,44 @@
 
   <body>
 	  <div>
-		  <nav>
-			<h1><%= link_to "메가박스" %></h1>
-			<ul>
-		  <% if user_signed_in? %>
-		  	<li><%= link_to "회원정보", edit_user_registration_path %> |</li>
-		  	<li><%= link_to "로그아웃", destroy_user_session_path, method: :delete %> |</li>
-		  	<li><%= link_to "빠른예매", edit_user_registration_path %></li> 
-		  <% else %>
-			  <li><%= link_to "로그인", user_session_path %> |</li>
-			  <li><%= link_to "회원가입" %></li>
-		  <%end%>
-			</ul>
-			<ul>
-				<li><%= link_to "영화" %></li>
-				<li><%= link_to "예매" %></li>
-				<li><%= link_to "극장" %></li>
-			  </ul>
+		  <nav class = main_header class = main_col>
+			  	<div class="container">
+					<div class = "aaa">
+						<ul class = "menu_item">
+					  <% if user_signed_in? %>
+						<li><%= link_to "회원정보", edit_user_registration_path %></li>
+						<li><%= link_to "로그아웃", destroy_user_session_path, method: :delete %></li>
+						<li><%= link_to "빠른예매", edit_user_registration_path %></li> 
+					  <% else %>
+						  <li><%= link_to "로그인", user_session_path %></li>
+						  <li><%= link_to "회원가입" %></li>
+					  <%end%>
+				  		</ul>
+					</div>
+					<header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+					  	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+						<a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+						<svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+					  </a>
+
+					  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+						<li class = bts><a href="#" class="nav-link px-2 link-secondary">영화</a></li>
+						<li class = bts2><a href="#" class="nav-link px-2 link-dark">예매</a></li>
+						<li class = bts3><a href="#" class="nav-link px-2 link-dark">극장</a></li>
+						<a href = "/"><img src="<%= asset_path("megabox.jpg") %>" alt="logo" style="width:140px;"></a>
+						<li class = bts4><a href="#" class="nav-link px-2 link-dark">이벤트</a></li>
+						<li class = bts5><a href="#" class="nav-link px-2 link-dark">스토어</a></li>
+						<li class = bts6><a href="#" class="nav-link px-2 link-dark">혜택</a></li>
+					  </ul>
+
+					  <div class="col-md-3 text-end">
+						<button type="button" class="btn btn-outline-primary me-2">달력</button>
+						<button type="button" class="btn btn-primary">내 정보</button>
+					  </div>
+					</header>
+  				</div>
 		  </nav>
-		  
+  </div>
 	  </div>
 	  
     <%= yield %>
