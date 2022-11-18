@@ -14,7 +14,10 @@
 	  <div>
 		  <%= icon('fas', 'flag') %>
 		  <nav>
-			<h1><%= link_to "메가박스" %><img src="<%= asset_path("megabox_logo.jpg") %>" alt="logo" style="width:300px;"></h1>
+			<h1><%= link_to "메가박스" %>
+				<a href="/">
+					<img src="<%= asset_path("megabox_logo.jpg") %>" alt="logo" style="width:300px;">
+				</a></h1>
 			<ul>
 		  <% if user_signed_in? %>
 		  	<li><%= link_to "회원정보", edit_user_registration_path %> </li>

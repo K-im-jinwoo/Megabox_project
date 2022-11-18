@@ -1,34 +1,45 @@
-<div>
-	<h1>전체 영화</h1>
-	<ul>
-		<li>
-			박스 오피스
-			<ul>
-				<% @movies.each do |movie| %>
-				<li>
-					<a href="/megabox/show/<%= movie.id %>">
-						영화상세정보로 이동
-						<% if movie.movie_img.attached? %>
-							<img src="<%= url_for(movie.movie_img) %>" alt="영화 포스터">
-						<% end %>
-						<h1>
-							<%= movie.movie_title %>
-						</h1>
-						<p>
-							<%= movie.movie_desc %>
-						</p>
-						<button>
-							<a href="#">예매</a>
-						</button>
-					</a>
-				</li>
-				<% end %>	
-			</ul>
 
-		</li>
-		<li>상영 예정작</li>
-		<li>특별상영</li>
-		<li>필름소사이어티</li>
-		<li>클래식소사이어티</li>
+	<h1>전체 영화</h1>
+	
+	<ul class="nav nav-tabs d-flex justify-content-center">
+	  <li class="nav-item">
+		<a class="nav-link active" aria-current="page" href="#">박스 오피스</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="#">상영 예정작</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link" href="#">특별상영</a>
+	  </li>
+	  <li class="nav-item">
+		<a class="nav-link disabled">필름소사이어티</a>
+	  </li>
+	 <li class="nav-item">
+		<a class="nav-link disabled">클래식소사이어티</a>
+	  </li>
 	</ul>
-</div>
+	
+	
+	<div class="container">
+		<div class="row" style="color: #fff;">
+			<% @movies.each do |movie| %>
+				<a href="/megabox/show/<%= movie.id %>">
+					<div class="col-3">
+						<div class="card text-bg-dark">
+						  <img src="<%= url_for(movie.movie_img) %>" class="card-img" alt="...">
+						  <div class="card-img-overlay">
+							<h5 class="card-title"><%= movie.movie_title %></h5>
+							<p class="card-text" style="  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-break:break-all;
+  width: 100px; height: 50px;"><%= movie.movie_desc %></p>
+							<p class="card-text"><small>Last updated 3 mins ago</small></p>
+						  </div>
+						</div>
+						<button>
+							<a href="/megabox/ticket_order">예매</a>
+						</button>
+					</div>
+				</a>
+			<% end %>	
+		</div>
+	</div>
+

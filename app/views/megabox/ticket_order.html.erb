@@ -1,4 +1,16 @@
-<button id="payment_btn">결제하기</button>
+<div class="container">
+	<div class="row">
+		<div class="col-9">좌석
+			<% @seats.each do |seat| %>
+				<%= seat.seat_name %>
+			<% end %>
+		</div>
+		<div class="col-3">영화 정보
+			<button id="payment_btn">결제하기</button>
+		</div>
+	</div>
+</div>
+
 <script>
 	$(function(){
 		var IMP = window.IMP; // 생략 가능

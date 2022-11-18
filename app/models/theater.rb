@@ -1,3 +1,3 @@
 class Theater < ApplicationRecord
-	belongs_to :theater_room
+	has_many :theater_rooms
 end
