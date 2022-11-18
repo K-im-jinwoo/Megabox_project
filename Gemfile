@@ -28,6 +28,10 @@ gem 'jbuilder', '~> 2.7'
 gem 'pg'
 gem 'devise'
 gem 'activeadmin'
+gem 'pry-rails'
+gem 'font-awesome-sass', '~> 5.13.0'
+gem 'bootstrap', '~> 4.5.0'
+gem 'jquery-rails'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.4.2', require: false

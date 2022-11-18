@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  tk_account: MyString
+  integer: MyString
+  tk_price: MyString
+  decimal: MyString
+  tk_seat: MyString
+  string: MyString
+
+two:
+  tk_account: MyString
+  integer: MyString
+  tk_price: MyString
+  decimal: MyString
+  tk_seat: MyString
+  string: MyString
