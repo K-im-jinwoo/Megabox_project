@@ -15096,3 +15096,167 @@ Processing by ActiveStorage::DiskController#show as PNG
 Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(8575728061014197160)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateTheaters (20221117085414)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (113.0ms)[0m  [1m[35mCREATE TABLE "theaters" ("id" bigserial primary key, "th_name" character varying, "string" character varying, "th_region" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20221117085414_create_theaters.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221117085414"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateTicketings (20221117091505)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (21.0ms)[0m  [1m[35mCREATE TABLE "ticketings" ("id" bigserial primary key, "tk_account" character varying, "integer" character varying, "tk_price" character varying, "decimal" character varying, "tk_seat" character varying, "string" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20221117091505_create_ticketings.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221117091505"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to ChangeColumn (20221117091839)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (3.4ms)[0m  [1m[35mALTER TABLE "theaters" DROP COLUMN "string"[0m
+  ↳ db/migrate/20221117091839_change_column.rb:3
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "ticketings" DROP COLUMN "string"[0m
+  ↳ db/migrate/20221117091839_change_column.rb:4
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "ticketings" DROP COLUMN "integer"[0m
+  ↳ db/migrate/20221117091839_change_column.rb:5
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "ticketings" DROP COLUMN "decimal"[0m
+  ↳ db/migrate/20221117091839_change_column.rb:6
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221117091839"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (2.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to ChangeColumn2 (20221117092757)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (28.1ms)[0m  [1m[35mALTER TABLE "ticketings" ALTER COLUMN "tk_account" TYPE integer USING tk_account::integer[0m
+  ↳ db/migrate/20221117092757_change_column2.rb:3
+  [1m[35m (18.4ms)[0m  [1m[35mALTER TABLE "ticketings" ALTER COLUMN "tk_price" TYPE decimal USING tk_price::numeric[0m
+  ↳ db/migrate/20221117092757_change_column2.rb:4
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221117092757"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateScreens (20221117094623)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (10.8ms)[0m  [1m[35mCREATE TABLE "screens" ("id" bigserial primary key, "sc_start" integer, "sc_end" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20221117094623_create_screens.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221117094623"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to CreateTheaterRooms (20221117094756)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (19.7ms)[0m  [1m[35mCREATE TABLE "theater_rooms" ("id" bigserial primary key, "tr_name" character varying, "tr_seat" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20221117094756_create_theater_rooms.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221117094756"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (3.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddUserToTicketing (20221118005415)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "ticketings" ADD "user_id" bigint[0m
+  ↳ db/migrate/20221118005415_add_user_to_ticketing.rb:3
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE  INDEX  "index_ticketings_on_user_id" ON "ticketings"  ("user_id")[0m
+  ↳ db/migrate/20221118005415_add_user_to_ticketing.rb:3
+  [1m[35m (7.5ms)[0m  [1m[35mALTER TABLE "ticketings" ADD CONSTRAINT "fk_rails_90d8927183"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+[0m
+  ↳ db/migrate/20221118005415_add_user_to_ticketing.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221118005415"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (3.5ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+Migrating to AddMovieToScreen (20221118010121)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "screens" ADD "movie_id" bigint[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:3
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE  INDEX  "index_screens_on_movie_id" ON "screens"  ("movie_id")[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:3
+  [1m[35m (1.7ms)[0m  [1m[35mALTER TABLE "screens" ADD CONSTRAINT "fk_rails_909c30e580"
+FOREIGN KEY ("movie_id")
+  REFERENCES "movies" ("id")
+[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:3
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "ticketings" ADD "screen_id" bigint[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:4
+  [1m[35m (8.4ms)[0m  [1m[35mCREATE  INDEX  "index_ticketings_on_screen_id" ON "ticketings"  ("screen_id")[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:4
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "ticketings" ADD CONSTRAINT "fk_rails_fbc98b88a7"
+FOREIGN KEY ("screen_id")
+  REFERENCES "screens" ("id")
+[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:4
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "screens" ADD "theater_room_id" bigint[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:5
+  [1m[35m (9.3ms)[0m  [1m[35mCREATE  INDEX  "index_screens_on_theater_room_id" ON "screens"  ("theater_room_id")[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:5
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "screens" ADD CONSTRAINT "fk_rails_042c31e606"
+FOREIGN KEY ("theater_room_id")
+  REFERENCES "theater_rooms" ("id")
+[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:5
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "seats" ADD "theater_room_id" bigint[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:6
+  [1m[35m (41.7ms)[0m  [1m[35mCREATE  INDEX  "index_seats_on_theater_room_id" ON "seats"  ("theater_room_id")[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:6
+  [1m[35m (1.9ms)[0m  [1m[35mALTER TABLE "seats" ADD CONSTRAINT "fk_rails_fc8c2f7cc1"
+FOREIGN KEY ("theater_room_id")
+  REFERENCES "theater_rooms" ("id")
+[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:6
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "theater_rooms" ADD "theater_id" bigint[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:7
+  [1m[35m (8.6ms)[0m  [1m[35mCREATE  INDEX  "index_theater_rooms_on_theater_id" ON "theater_rooms"  ("theater_id")[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:7
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "theater_rooms" ADD CONSTRAINT "fk_rails_8e37cb036f"
+FOREIGN KEY ("theater_id")
+  REFERENCES "theaters" ("id")
+[0m
+  ↳ db/migrate/20221118010121_add_movie_to_screen.rb:7
+  [1m[36mActiveRecord::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20221118010121"]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (3.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Load (3.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(8575728061014197160)[0m
+  ↳ /usr/local/bin/rake:23
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/bin/rake:23
+Started GET "/?t=1668765181621" for 172.17.0.1 at 2022-11-18 09:53:01 +0000
+Cannot render console from 10.1.20.202! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by MegaboxController#index as HTML
+  Parameters: {"t"=>"1668765181621"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ /usr/local/lib/ruby/gems/2.6.0/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  Rendering megabox/index.html.erb within layouts/application
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies"[0m
+  ↳ app/views/megabox/index.html.erb:6
+  [1m[36mActiveStorage::Attachment Load (0.7ms)[0m  [1m[34mSELECT  "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = $1 AND "active_storage_attachments"."record_type" = $2 AND "active_storage_attachments"."name" = $3 LIMIT $4[0m  [["record_id", 1], ["record_type", "Movie"], ["name", "movie_img"], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT  "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/megabox/index.html.erb:10
+  Rendered megabox/index.html.erb within layouts/application (292.5ms)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19505ms (Views: 19388.5ms | ActiveRecord: 93.9ms)
+
+

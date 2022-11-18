@@ -7,12 +7,10 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
-	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
   </head>
 
   <body>
 	  <div>
-<<<<<<< HEAD
 		  <nav class = main_header class = main_col>
 			  	<div class="container">
 					<div class = "aaa">
@@ -49,32 +47,10 @@
 					  </div>
 					</header>
   				</div>
-=======
-		  <%= icon('fas', 'flag') %>
-		  <nav>
-			<h1><%= link_to "메가박스" %><img src="<%= asset_path("megabox_logo.jpg") %>" alt="logo" style="width:300px;"></h1>
-			<ul>
-		  <% if user_signed_in? %>
-		  	<li><%= link_to "회원정보", edit_user_registration_path %> </li>
-		  	<li><%= link_to "로그아웃", destroy_user_session_path, method: :delete %> </li>
-		  	<li><%= link_to "빠른예매", edit_user_registration_path %></li> 
-		  <% else %>
-			  <li><%= link_to "로그인", user_session_path %> </li>
-			  <li><%= link_to "회원가입" %></li>
-		  <%end%>
-			</ul>
-			<ul>
-				<li><a href="/megabox/movie">영화</a></li>
-				<li><a href="/megabox/ticket">예매</a></li>
-				<li><%= link_to "극장" %></li>
-			</ul>
->>>>>>> 7f6f2db91b6f8336d6e8b292097053bc9e905bff
 		  </nav>
   </div>
 	  </div>
 	  
     <%= yield %>
-  <!-- iamport.payment.js -->
-  <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
   </body>
 </html>

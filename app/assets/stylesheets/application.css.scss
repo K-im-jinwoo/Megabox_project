@@ -1,3 +1,53 @@
 @import "bootstrap";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+
+.aaa {
+	position : relative;
+	display: flex;
+}
+.bts {
+	position: absolute;
+	left : 276px;
+	font-weight: bold;
+}
+.bts2 {
+	position: absolute;
+	left : 366px;
+	font-weight: bold;
+}
+.bts3 {
+	position: absolute;
+	left : 455px;
+	font-weight: bold;
+}
+.bts4 {
+	position: absolute;
+	right : 487px;
+	font-weight: bold;
+}
+.bts5 {
+	position: absolute;
+	right : 391px;
+	font-weight: bold;
+}
+.bts6 {
+	position: absolute;
+	right : 300px;
+	font-weight: bold;
+}
+	
+.menu_item {
+	position : absolute;
+	font-weight: bold;
+	top: 0;
+	right: 0;
+	font-size : 14px;
+}
+
+li {
+	display: inline;
+}
+header {
+	margin : 10px;
+}
