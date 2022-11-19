@@ -1,24 +1,7 @@
-# README
+# This is an open source class assignment.
+## 메가박스 클론코딩입니다.
+Ruby on Rails를 사용해서 구현 중
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### ERD Diagram 
+![megabox](https://user-images.githubusercontent.com/71208129/202840775-86346b52-46f4-49c6-a4f8-8377797645c0.png)
