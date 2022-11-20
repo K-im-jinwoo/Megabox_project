@@ -24,7 +24,7 @@
 		<div class="row" style="color: #fff;">
 			<% @movies.each do |movie| %>
 					<div class="col-3">
-						<a href="/megabox/show/<%= movie.id %>">
+						<a href="/movies/<%= movie.id %>">
 						<div class="card text-bg-dark">
 						  <img src="<%= url_for(movie.movie_img) %>" class="card-img" alt="...">
 						  <div class="card-img-overlay" style="height:220px;">

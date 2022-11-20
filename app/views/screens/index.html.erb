@@ -31,18 +31,21 @@
 			<h2>
 				영화
 			</h2>
-			<form action="ticket_show" method="GET">
+			<form action="/ticketings" method="POST">
 				<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-				<input type="hidden" name="screen_id" value="<%= @screens.ids %>">
+				<input type="hidden" name="tk_price" value=12000>
 					<% @movies.each do |movie| %>
 					<label for="movie_title">
-						<input type="checkbox" name="movie_title" value="<%= movie.movie_title %>" min="0" id="movie_title">
-						<%= movie.movie_title %>
+					<input type="checkbox" name="movie_title" value="<%= movie.movie_title %>" min="0" id="movie_title">
+					<%= movie.movie_title %>							
 					</label>
+				
 				<% end %>
 				<button type="submit" class="btn btn-outline-dark">
 					다음
 				</button>
+				
+			
 		</div>
 		
 		<div class="col-4">
@@ -54,15 +57,15 @@
 			<% @theaters.each do |theater| %>
 				<label for="th_region">
 					<input type="checkbox" name="<%= theater.th_region %>" value="0" min="0" id="th_region">
-					<%= theater.th_region %>
+					<strong><%= theater.th_region %></strong>
 				</label>
 				<label for="th_name">
 					<input type="checkbox" name="<%= theater.th_name %>" value="0" min="0" id="th_name">
-					<%= theater.th_name %>
+					<strong><%= theater.th_name %></strong>
 				</label>
 			<% end %>
-			</form>
 		</div>
+	</div>
 		
 		
 		<div class="col-5">
@@ -85,3 +88,24 @@
 		</div>
 	</div>	
 </div>
+
+<h3>
+	관람 인원 선택
+</h3>
+
+
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	
+	<label for="account">성인</label>
+	<input type="number" name="adult" value="0" min="0" id="adult">
+	<label for="account">청소년</label>
+	<input type="number" name="teenager" value="0" min="0" id="teenager">
+	<label for="account">우대</label>
+	<input type="number" name="quantity" value="0" min="0">
+
+
+	<button type="submit" class="btn btn-outline-dark">
+		다음
+	</button>
+</form>
+

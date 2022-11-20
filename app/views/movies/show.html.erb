@@ -12,7 +12,12 @@
 			</button>
 		</div>
 		<div class="col-6">
-			<img src="<%= url_for(@movie.movie_img) %>">
+			<% if @movie.movie_img.attached? %>
+				<img src="<%= url_for(@movie.movie_img) %>">
+			<% else %>
+				<img src="https://via.placeholder.com/640x360?text=No+Image" class="img-fluid">
+			<% end %>
+			
 			<button>
 				<a href="/megabox/ticket_order">예매</a>
 			</button>

@@ -1,15 +1,22 @@
 Rails.application.routes.draw do
+	root :to => "megabox#index"
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
-  get 'megabox/ticket_order'
-  get 'megabox/ticket_show'
-  get 'megabox/ticket'
-  get 'megabox/show/:id' => "megabox#show"
-  get 'megabox/movie'
+	
+  resources :movies, only: [:index, :show]
+  
+  resources :screens, only: [:index]
+	
+  resources :ticketings, only: [:create, :index]
+	
+	
+  
   devise_for :users
+  
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 
-	root :to => "megabox#index"
+	
 	
 	
 	
