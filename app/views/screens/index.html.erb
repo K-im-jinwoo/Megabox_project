@@ -1,0 +1,193 @@
+<head>
+	<%= stylesheet_link_tag "screens" %>
+</head>
+<h1>
+	빠른 예매
+</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-12">
+			<button>이전 날짜</button>
+			<button>1</button>
+			<button>2</button>
+			<button>3</button>
+			<button>4</button>
+			<button>5</button>
+			<button>6</button>
+			<button>7</button>
+			<button>8</button>
+			<button>9</button>
+			<button>10</button>
+			<button>11</button>
+			<button>12</button>
+			<button>13</button>
+			<button>14</button>
+			<button>다음 날짜</button>
+			<button>달력</button>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-3">
+			<h2>
+				영화
+			</h2>
+			<form action="/ticketings" method="POST">
+				<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+				<input type="hidden" name="tk_price" value=12000>
+					<% @movies.each do |movie| %>
+					<label for="movie_title">
+					<input type="checkbox" name="movie_title" value="<%= movie.movie_title %>" min="0" id="movie_title">
+					<%= movie.movie_title %>							
+					</label>
+				
+				<% end %>
+				<button type="submit" class="btn btn-outline-dark">
+					다음
+				</button>
+				
+			
+		</div>
+		
+		<div class="col-4">
+			<h2>
+				극장
+			</h2>
+			<button>전체</button>
+			<button>특별관</button>
+			<% @theaters.each do |theater| %>
+				<label for="th_region">
+					<input type="checkbox" name="<%= theater.th_region %>" value="0" min="0" id="th_region">
+					<strong><%= theater.th_region %></strong>
+				</label>
+				<label for="th_name">
+					<input type="checkbox" name="<%= theater.th_name %>" value="0" min="0" id="th_name">
+					<strong><%= theater.th_name %></strong>
+				</label>
+			<% end %>
+		</div>
+	</div>
+		
+		
+		<div class="col-5">
+			<p>시간</p>
+			<p>조조    브런치	심야</p>
+			<div class="col-12">
+				<button>뒤로가기</button>
+				<button>00</button>
+				<button>01</button>
+				<button>02</button>
+				<button>03</button>
+				<button>04</button>
+				<button>05</button>
+				<button>06</button>
+				<button>07</button>
+				<button>08</button>
+				<button>09</button>
+				<button>앞으로 가기</button>
+			</div>
+		</div>
+	</div>	
+</div>
+
+<h3>
+	관람 인원 선택
+</h3>
+
+
+	<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+	
+	<label for="account">성인</label>
+	<input type="number" name="adult" value="0" min="0" id="adult">
+	<label for="account">청소년</label>
+	<input type="number" name="teenager" value="0" min="0" id="teenager">
+	<label for="account">우대</label>
+	<input type="number" name="quantity" value="0" min="0">
+
+
+	<button type="submit" class="btn btn-outline-dark">
+		다음
+	</button>
+</form>
+
+<ul class="showcase">
+    <li>
+		<div class="seat"></div>
+        <small>N/A</small>
+    </li>
+    <li>
+        <div class="seat selected"></div>
+        <small>Selected</small>
+    </li>
+    <li>
+        <div class="seat occupied"></div>
+        <small>Occupied</small>
+	</li>
+</ul>
+
+<div class="container">
+      <div class="screen"></div>
+
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+      </div>
+      <div class="row">
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+        <div class="seat"></div>
+	</div>
+</div>

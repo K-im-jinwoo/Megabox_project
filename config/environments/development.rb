@@ -1,6 +1,7 @@
 Rails.application.configure do
   begin
     config.hosts << /.*\.goorm\.io$/
+	config.web_console.whiny_requests = false
   rescue
   end
   # Settings specified here will take precedence over those in config/application.rb.
