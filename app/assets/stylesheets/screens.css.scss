@@ -21,7 +21,7 @@
   appearance: none;
 }
 
-.container {
+.cont {
   perspective: 1000px;
   margin-bottom: 30px;
 }
@@ -88,9 +88,9 @@
 }
 
 .screen {
-  background-color: #fff;
+  background-color: #666;
   height: 70px;
-  width: 100%;
+  width: 240px;
   margin: 15px 0;
   transform: rotateX(-45deg);
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
@@ -102,4 +102,16 @@ p.text {
 
 p.text span {
   color: #6feaf6;
+}
+
+// 시간
+.time_title {
+	display: flex;
+	justify-content: space-between;
+}
+.time_title > p, .time_title > h2{
+}
+
+.wrap {
+	border: 1px solid #666;
 }
