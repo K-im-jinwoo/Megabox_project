@@ -12,6 +12,6 @@ class TicketingsController < ApplicationController
 			tk_price: @price.to_i * params[:adult].to_i
 			)
 		
-		redirect_back(fallback_location: root_path)
+		redirect_to '/ticketings/'
 	end
 end

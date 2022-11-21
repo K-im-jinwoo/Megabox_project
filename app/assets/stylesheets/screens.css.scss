@@ -5,6 +5,22 @@
   box-sizing: border-box;
 }
 
+.movie-container {
+  margin: 20px 0;
+}
+
+.movie-container select {
+  background-color: #fff;
+  border: 0;
+  border-radius: 5px;
+  font-size: 14px;
+  margin-left: 10px;
+  padding: 5px 15px 5px 15px;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .cont {
   perspective: 1000px;
   margin-bottom: 30px;
@@ -46,7 +62,7 @@
 }
 
 .showcase {
-	width: 500px;
+  width:500px;
   background: rgba(0, 0, 0, 0.1);
   padding: 5px 10px;
   border-radius: 5px;
@@ -72,10 +88,30 @@
 }
 
 .screen {
-  background-color: #fff;
+  background-color: #666;
   height: 70px;
-  width: 100%;
+  width: 240px;
   margin: 15px 0;
   transform: rotateX(-45deg);
   box-shadow: 0 3px 10px rgba(255, 255, 255, 0.7);
+}
+
+p.text {
+  margin: 5px 0;
+}
+
+p.text span {
+  color: #6feaf6;
+}
+
+// 시간
+.time_title {
+	display: flex;
+	justify-content: space-between;
+}
+.time_title > p, .time_title > h2{
+}
+
+.wrap {
+	border: 1px solid #666;
 }
