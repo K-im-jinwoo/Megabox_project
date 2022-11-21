@@ -1,6 +1,5 @@
 <head>
 	<%= stylesheet_link_tag "screens" %>
-	<%= javascript_pack_tag "screens" %> 
 </head>
 <h1>
 	빠른 예매
@@ -37,7 +36,7 @@
 			</h2>
 			<form action="/ticketings" method="POST">
 				<%= hidden_field_tag :authenticity_token, form_authenticity_token %>
-				<input type="hidden" name="tk_price" value=12000>
+				<input type="hidden" name="tk_price" value=12000 id="tk_price">
 					<% @movies.each do |movie| %>
 					<label for="movie_title">
 					<input type="checkbox" name="movie_title" value="<%= movie.movie_title %>" min="0" id="movie_title">
