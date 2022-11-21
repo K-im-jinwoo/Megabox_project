@@ -5,8 +5,10 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    
+	<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+	<script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js" ></script>
   </head>
 
   <body>
@@ -32,9 +34,9 @@
 					  </a>
 
 					  <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-						<li class = bts><a href="#" class="nav-link px-2 link-secondary">영화</a></li>
-						<li class = bts2><a href="#" class="nav-link px-2 link-dark">예매</a></li>
-						<li class = bts3><a href="#" class="nav-link px-2 link-dark">극장</a></li>
+						<li class = bts><a href="/megabox/movie" class="nav-link px-2 link-secondary">영화</a></li>
+						<li class = bts2><a href="/megabox/ticket" class="nav-link px-2 link-dark">예매</a></li>
+						<li class = bts3><a href="/megabox/thearter" class="nav-link px-2 link-dark">극장</a></li>
 						<a href = "/"><img src="<%= asset_path("megabox.jpg") %>" alt="logo" style="width:140px;"></a>
 						<li class = bts4><a href="#" class="nav-link px-2 link-dark">이벤트</a></li>
 						<li class = bts5><a href="#" class="nav-link px-2 link-dark">스토어</a></li>
@@ -48,9 +50,10 @@
 					</header>
   				</div>
 		  </nav>
-  </div>
-	  </div>
+  	</div>
+
 	  
     <%= yield %>
+	<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.8.js"></script>
   </body>
 </html>

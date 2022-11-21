@@ -1,4 +1,5 @@
 class MegaboxController < ApplicationController
+	
 	def index
 		@movies = Movie.all
 	end
@@ -14,11 +15,17 @@ class MegaboxController < ApplicationController
 
 	def ticket
 		@movies = Movie.all
+		@theaters = Theater.all
+		@screens = Screen.all
 	end
 	
 	def ticket_show
-		@movie = Movie.find(params[:id])
+		@movie = Movie.all
+		@movie_title = params[:movie_title]
+		@th_region = params[:th_region]
+		@th_name = params[:th_name]
 	end
 	def ticket_order
+		@seats = Seat.used
 	end
 end

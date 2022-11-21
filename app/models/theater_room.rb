@@ -1,4 +1,4 @@
 class TheaterRoom < ApplicationRecord
-	has_many: theaters
-	has_many: seats
+	belongs_to :theater
+	has_many :seats
 end
