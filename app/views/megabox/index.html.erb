@@ -1,10 +1,10 @@
 <head>
 	<%= stylesheet_link_tag "megabox" %>
 </head>
-<h3 class="title" style="text-align: center; border-bottom: 2px solid #666;">
+<h3 class="title border-bottom" style="text-align: center;">
 		박스오피스
 </h3>
-<div class="container">
+<div class="container mt-3">
 		<div class="row" style="color: #fff;">
 			<% @movies.each do |movie| %>
 					<div class="col-3">
@@ -12,17 +12,42 @@
 						<div class="card text-bg-dark">
 						  <img src="<%= url_for(movie.movie_img) %>" class="card-img" alt="...">
 						  <div class="card-img-overlay" style="height:220px;">
-							<h5 class="card-title"><%= movie.movie_title %></h5>
-							<p class="card-text" style="  overflow: hidden; text-overflow: ellipsis; white-space: nowrap; word-break:break-all;
-  width: 100px; height: 50px;"><%= movie.movie_desc %></p>
-							<p class="card-text"><small>Last updated 3 mins ago</small></p>
+							  <div class="card-main">
+								<h5 class="card-title"><%= movie.movie_title %></h5>
+								<p class="card-text card-main"><div class="card-desc"><%= movie.movie_desc %></div></p>
+								<p class="card-text"><small>Last updated 3 mins ago</small></p>							  	
+							  </div>
 						  </div>
 						</div>
 						</a>
-						<button>
-							<a href="/megabox/ticket_order">예매</a>
+						<button class="btn btn-primary mt-1">
+							<a href="/megabox/ticket_order" class = "btn btn-primary">예매</a>
 						</button>	
 					</div>
 			<% end %>	
+	</div>
+</div>
+
+<div class="container mt-5">
+	<div class="row bottom-nav">
+		<div class="col-3">
+			<nav class="navbar bg-light">
+			  <div class="container-fluid">
+				<form class="d-flex" role="search">
+				  <input class="form-control me-2" type="search" placeholder="영화명 입력해주세요" aria-label="Search">
+				  <button class="btn btn-outline-success" type="submit"></button>
+				</form>
+			  </div>
+			</nav>
+		</div>
+		<div class="col-3">
+			<button type="button" class="btn btn-secondary btn-lg">상영 시간표</button>
+		</div>
+		<div class="col-3">
+			<button type="button" class="btn btn-secondary btn-lg">박스 오피스</button>
+		</div>
+		<div class="col-3">
+			<button type="button" class="btn btn-secondary btn-lg">빠른 예매</button>
+		</div>
 	</div>
 </div>

@@ -7,3 +7,12 @@ body {
 	margin: 0 18px;
 	padding: 0 0 5px 0;
 }
+
+.card-desc {
+	overflow: hidden; 
+	text-overflow: ellipsis; 
+	white-space: nowrap; 
+	word-break:break-all;
+  	width: 100px; 
+	height: 50px;
+}
