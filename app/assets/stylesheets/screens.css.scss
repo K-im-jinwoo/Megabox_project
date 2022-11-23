@@ -109,7 +109,8 @@ p.text span {
 	display: flex;
 	justify-content: space-between;
 }
-.time_title > p, .time_title > h2{
+.time_title > h2{
+	width:100px;
 }
 
 .wrap {
