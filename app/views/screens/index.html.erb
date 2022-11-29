@@ -104,21 +104,31 @@
 				<div class="row">
 					<!-- 지역 -->
 					<div class="col-6">
-						<% @theaters.each do |theater| %>
 							<label for="th_region" class="form-check-label">
-								<input type="checkbox" name="<%= theater.th_region %>" value="0" min="0" id="th_region" class="form-check-input">
-								<%= theater.th_region %>
+								<input type="checkbox" name="th_region" value="부산" min="0" id="th_region" class="form-check-input">
+								부산
 							</label><br>
-						<% end %>
+							<label for="th_region1" class="form-check-label">
+								<input type="checkbox" name="th_region" value="서울" min="0" id="th_region1" class="form-check-input">
+								서울
+							</label><br>
 					</div>
 					
 					<!-- 극장 -->
 					<div class="col-6">
 						<% @theaters.each do |theater| %>
-							<label for="th_name" class="form-check-label">
+						<% if theater.th_region == "부산" %>
+							<label for="th_name" class="form-check-label th_list hide" >
 								<input type="checkbox" name="<%= theater.th_name %>" value="0" min="0" id="th_name" class="form-check-input">
 								<%= theater.th_name %>
 							</label><br>
+						<% elsif theater.th_region == "서울" %>
+							<label for="th_name" class="form-check-label th_list1 hide1" >
+								<input type="checkbox" name="<%= theater.th_name %>" value="0" min="0" id="th_name" class="form-check-input">
+								<%= theater.th_name %>
+							</label><br>
+						<% end %>
+						
 						<% end %>				
 					</div>
 				</div>
@@ -160,6 +170,7 @@
 				  </ul>
 				</nav>
 			</div>
+			<!-- 영화 선택 -->
 			<div class="col-12">
 				<ul class="list-group">
 					<% @screen.each do |screen| %>
@@ -367,6 +378,17 @@
 
 	// Initial count and total set
 	updateSelectedCount();
+	
+	// 메뉴 토글
+    $(document).ready(function(){
+        // memu 클래스 바로 하위에 있는 a 태그를 클릭했을때
+        $("#th_region").click(function(){
+            $(".th_list").toggleClass("hide");
+        });
+		$("#th_region1").click(function(){
+            $(".th_list1").toggleClass("hide1");
+        });
+    });
 </script>
 
 
