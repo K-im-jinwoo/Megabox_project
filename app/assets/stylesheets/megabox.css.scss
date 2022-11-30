@@ -18,8 +18,18 @@ body {
 }
 .search-link {
 	display: flex;
-	margin: 50px 20px 0 20px;
+	margin: 100px 40px 100px 20px;
+	padding: 20px 0 20px 0;
 }
 .cell {
 	margin: 5px 20px 5px 20px;
+	text-align: center;
+}
+.search {
+	text-align: center;
+}
+
+#afs a {
+	text-decoration: none; /* 링크의 밑줄 제거 */
+	color: inherit; /* 링크의 색상 제거 */
 }

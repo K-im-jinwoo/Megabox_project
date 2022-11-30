@@ -1,5 +1,6 @@
 <head>
 	<%= stylesheet_link_tag "megabox" %>
+	<script src="https://kit.fontawesome.com/92ee59bde0.js" crossorigin="anonymous"></script>
 </head>
 <h3 class="title border-bottom" style="text-align: center; margin-top: 100px;">
 		박스오피스
@@ -28,18 +29,18 @@
 	</div>
 </div>
 
-<div class = container>
+<div class = "container col-11">
 	<div class="search-link">
-		<div class="cell">
+		<div class="cell col-4">
 			<div class="search">
 				<input type="text" placeholder="영화명을 입력해 주세요" title="영화 검색" class="input-text" id="movieName">
-				<button type="button" class="btn" id="btnSearch"><i class="iconset ico-search-w"></i> 검색</button>
+				<button type="button" class="btn" id="btnSearch"><i class="fa-solid fa-magnifying-glass"></i></button>
 			</div>
 		</div>
 
-		<div class="cell"><a href="#" title="상영시간표 보기"><i class="iconset ico-schedule-main"></i> 상영시간표</a></div>
-		<div class="cell"><a href="#" title="박스오피스 보기"><i class="iconset ico-boxoffice-main"></i> 박스오피스</a></div>
-		<div class="cell"><a href="#" title="빠른예매 보기"><i class="iconset ico-quick-reserve-main"></i> 빠른예매</a></div>
+		<div class="cell col-2" id = afs><a href="#" title="상영시간표 보기"><i class="fa-regular fa-calendar-days"></i> 상영시간표</a></div>
+		<div class="cell col-2" id = afs><a href="#" title="박스오피스 보기"><i class="fa-solid fa-film"></i> 박스오피스</a></div>
+		<div class="cell col-2" id = afs><a href="#" title="빠른예매 보기"><i class="fa-solid fa-ticket"></i> 빠른예매</a></div>
 	</div>
 </div>
 
