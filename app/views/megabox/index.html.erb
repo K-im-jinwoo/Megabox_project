@@ -1,7 +1,7 @@
 <head>
 	<%= stylesheet_link_tag "megabox" %>
 </head>
-<h3 class="title border-bottom" style="text-align: center; margin-top: 100px;">
+<h3 class="title border-bottom" style="text-align: center; margin-top: 100px; font-size:25px;">
 		박스오피스
 </h3>
 <div class="container mt-5">
@@ -14,15 +14,14 @@
 						  <div class="card-img-overlay" style="height:220px;">
 							  <div class="card-main">
 								<h5 class="card-title"><%= movie.movie_title %></h5>
-								<p class="card-text card-main"><div class="card-desc"><%= movie.movie_desc %></div></p>
-								<p class="card-text"><small>Last updated 3 mins ago</small></p>							  	
+								<p class="card-text"><div class="card-desc"><%= movie.movie_desc %></div></p>					  	
 							  </div>
 						  </div>
 						</div>
 						</a>
-						<button class="btn btn-primary mt-1">
-							<a href="/megabox/ticket_order" class = "btn btn-primary">예매</a>
-						</button>	
+						<button class="btn btn-primary mt-1 w-100">
+							<a href="/ticketings" class = "btn btn-primary w-100">예매</a>
+						</button>
 					</div>
 			<% end %>	
 	</div>
