@@ -15,7 +15,8 @@ Ruby on Rails를 사용해서 구현하였습니다.
 ![megabox](https://user-images.githubusercontent.com/71208129/202840775-86346b52-46f4-49c6-a4f8-8377797645c0.png)
 ### tool
 ![오픈소스 메가박스 ppt (3)](https://user-images.githubusercontent.com/71208129/206075089-b7958f97-82cf-4367-a405-24f61ff983da.jpg)
-노션 https://cobalt-rotate-153.notion.site/Open-source-Megabox-project-94c4576eb13a46cc80cdc59ae6680cd2
+### Notion
+https://cobalt-rotate-153.notion.site/Open-source-Megabox-project-94c4576eb13a46cc80cdc59ae6680cd2
 
 프로젝트를 진행하면서 아쉬웠던 점은 3가지가 있었습니다.
 메인페이지와 영화목록 페이지에서 영화를 검색 할 수 있는 기능을 아직 구현하지 못하였습니다.
